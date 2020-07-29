@@ -42,4 +42,7 @@ const setProgressAndStatus = (progressVal, statusMsg) => {
   $('#order-status-message').html(statusMsg);
 };
 
-
+const addCoffee = $('#place-order');
+addCoffee.on('click', () => {
+  incrementCoffeeSold($('#cart-items').children().length);
+});
