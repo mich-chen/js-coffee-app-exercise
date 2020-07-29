@@ -8,6 +8,14 @@ const addItemToCart = (itemName) => {
   `);
 };
 
+
+const addButton = $('.add-to-order');
+addButton.on('click', () => {
+  addItemToCart('Coffee');
+  incrementCartTotal(1.50);
+});
+
+
 const resetCart = () => {
   $('#cart-total').html('0.00');
   $('#cart-items').empty();
@@ -35,6 +43,3 @@ const setProgressAndStatus = (progressVal, statusMsg) => {
 };
 
 
-//
-// Add your event handlers below.
-//
